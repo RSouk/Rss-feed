@@ -28,8 +28,9 @@ jobs:
           pip install requests beautifulsoup4
           
       - name: Generate RSS feed
-        run: python generate_feed.py
-             python generate_payments_canada.py
+        run: |
+          python generate_feed.py
+          python generate_payments_canada.py
             
       - name: Commit and push changes
         run: |
